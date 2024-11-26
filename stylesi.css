@@ -1,0 +1,69 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
+        }
+        header {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: right;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(35deg, #0CCBA0, #1D67CD);
+        }
+        h1 {
+            color: #C9EFAA;
+        }
+.container2 {
+            display: flex;
+            align-items: center;
+        }
+        .image {
+            margin-right: 10px; /* Отступ между картинкой и текстом */
+        }
+.events-slider {
+    column-count: 2; /* установка количества столбцов */
+    column-gap: 20px; /* установка расстояния между столбцами */
+    padding: 20px 0; /* внутренние отступы сверху и снизу */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* тень для блока */
+}
+.events-item {
+    width: 100%; /* Ширина контейнера */
+    height: 550px; /* Высота контейнера */
+    overflow: hidden; /* Скрываем все, что выходит за пределы */
+    break-inside: avoid; /* предотвращение разрыва блока внутри */
+    padding: 10px; /* внутренние отступы внутри события */
+    border-bottom: 1px solid #ccc; /* линия разделителя */
+}
+
+.events-item img {
+    width: 100%; /* Ширина изображения на 100% от контейнера */
+    height: auto; /* Высота авто, сохраняющая пропорции */
+    max-height: 450px; /* Максимальная высота изображения */
+}
+.events-item h4 {
+    margin-top: 10px; /* отступ сверху для заголовка */
+    color: white; /* цвет заголовка */
+}
+
+.events-item p {
+    color: white; /* цвет описания */
+}
+.events-item a {
+    color: #CCBA00; /* Задайте желаемый цвет для текста ссылки */
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+.events-item a:hover {
+    text-decoration: underline; /* Добавляет подчеркивание при наведении, если это нужно */
+}
+

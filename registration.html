@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать на сайт фанатов аниме</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать на сайт фанатов аниме!</h1>
+        <p>Зарегистрируйтесь, чтобы начать игру и встретиться с другими фанатами.</p>
+
+        <form id="registrationForm">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" required>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" required>
+
+            <label for="bio">О себе:</label>
+            <textarea id="bio" rows="4"></textarea>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const age = document.getElementById('age').value;
+            const bio = document.getElementById('bio').value;
+
+            const userData = { username, email, password, age, bio };
+
+            // Сохраняем данные о пользователе в localStorage
+            localStorage.setItem(username, JSON.stringify(userData));
+
+            document.getElementById('message').innerText = 'Регистрация прошла успешно!';
+
+            // Переход на страницу входа после регистрации
+            window.location.href = 'login.html';
+        });
+    </script>
+
+</body>
+</html>

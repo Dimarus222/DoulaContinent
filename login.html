@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход на сайт фанатов аниме</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Вход на сайт фанатов аниме!</h1>
+
+        <form id="loginForm">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Войти</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const userData = JSON.parse(localStorage.getItem(username));
+
+        if (userData && userData.password === password) {
+            document.getElementById('message').innerText = 'Добро пожаловать, ' + username + '!';
+
+            // Сохраняем текущее имя пользователя
+            localStorage.setItem('currentUser', username);
+
+            // Переход на страницу профиля после успешного входа
+            window.location.href = 'profile.html';
+        } else {
+            document.getElementById('message').innerText = 'Неверное имя пользователя или пароль!';
+        }
+    });
+</script>
+
+</body>
+</html>
