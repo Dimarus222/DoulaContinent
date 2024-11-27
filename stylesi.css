@@ -1,19 +1,21 @@
-html, body {
-    height: 100%; /* Устанавливаем высоту для html и body на 100% */
-    margin: 0; /* Убираем отступы */
-    padding: 0; /* Убираем внутренние отступы */
-}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
 }
+
 header {
     background-color: #333;
     padding: 1rem; /* Используем rem для отзывчивости */
     color: white;
-    text-align: right;
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    align-items: center; /* Вертикальное центрирование */
+}
+
+.header-links {
+    display: flex; /* Используем flexbox для расположения ссылок в строку */
 }
 
 header a {
