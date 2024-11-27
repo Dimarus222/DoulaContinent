@@ -12,18 +12,20 @@ body {
 .container {
     max-width: 400px;
     margin: 50px auto;
-    padding: 30px;
+    padding: 20px; /* Уменьшаем отступы внутри контейнера */
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для контейнера */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Заголовок */
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px; /* Отступ снизу */
 }
 
+/* Метки для ввода */
 label {
     display: block;
     margin-bottom: 8px;
@@ -31,23 +33,26 @@ label {
     font-weight: bold; /* Сделаем текст меток жирным */
 }
 
+/* Поля ввода */
 input {
-    width: 100%;
-    padding: 10px 10px;
+    width: calc(100% - 20px); /* Уменьшаем ширину для отступов */
+    padding: 10px; /* Общее внутреннее заполнение */
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: border-color 0.3s; /* Плавный переход при наведении */
 }
 
+/* Эффект при фокусировке */
 input:focus {
     border-color: #28a745; /* Подсвечиваем рамку при фокусе */
     outline: none; /* Убираем стандартный outline */
 }
 
+/* Кнопка регистрации */
 button {
-    width: 103%;
-    padding: 10px 0px 7px 10px;
+    width: calc(100% - 20px); /* Уменьшаем ширину для отступов */
+    padding: 10px; /* Общее внутреннее заполнение */
     background-color: #28a745;
     color: white;
     border: none;
@@ -57,18 +62,37 @@ button {
     transition: background-color 0.3s;
 }
 
+/* Эффект при наведении на кнопку */
 button:hover {
     background-color: #218838; /* Тень при наведении */
 }
 
+/* Сообщение об результате */
 #message {
     margin-top: 15px;
     text-align: center;
     color: #28a745;
 }
 
+/* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
     .container {
-        padding: 20px; /* Уменьшение отступов на маленьких экранах */
+        margin: 20px; /* Уменьшаем отступы по краям на мобильных устройствах */
+        padding: 15px; /* Уменьшение отступов внутри контейнера */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Уменьшаем размер заголовка для маленьких экранов */
+    }
+
+    input, button {
+        font-size: 14px; /* Уменьшаем размер текста в полях ввода и кнопке */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px; /* Минимальное расстояние для маленьких экранов */
+        padding: 10px; /* Уменьшение отступов внутри контейнера */
     }
 }
