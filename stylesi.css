@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
+}
+
+header {
+    background-color: #333;
+    padding: 1rem; /* Используем rem для отзывчивости */
+    color: white;
+    text-align: right;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem; /* Используем rem */
+}
+
+.container {
+    padding: 2rem; /* Используем rem */
+    text-align: center;
+    background: linear-gradient(35deg, #0CCBA0, #1D67CD);
+}
+
+h1 {
+    color: #C9EFAA;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    margin-right: 1rem; /* Используем rem */
+}
+
+.events-slider {
+    display: flex;
+    flex-wrap: wrap; /* Позволяем элементам переноситься */
+    justify-content: center; /* Центрируем элементы */
+    gap: 1rem; /* Пробел между элементами */
+}
+
+.events-item {
+    flex: 0 1 calc(50% - 1rem); /* Автоматическая ширина с отступами */
+    max-width: 500px; /* Ограничиваем максимальную ширину для больших экранов */
+    height: auto; /* Высота автоматически */
+    overflow: hidden; /* Скрываем содержимое, выходящее за пределы */
+    padding: 1rem; /* Используем rem для адаптивности */
+    border: 1px solid #ccc; /* Линия разделителя */
+    background-color: rgba(0, 0, 0, 0.5); /* Фон для элементов */
+}
+
+.events-item img {
+    width: 100%; /* Ширина изображения на 100% от контейнера */
+    height: auto; /* Высота авто, сохраняющая пропорции */
+    max-height: 400px; /* Максимальная высота изображения */
+    object-fit: cover; /* Сохраняем пропорции, обрезаем избыточные части */
+}
+
+.events-item h4 {
+    margin-top: 1rem;
+    color: white;
+}
+
+.events-item p {
+    color: white;
+}
+
+.events-item a {
+    color: #CCBA00;
+    text-decoration: none;
+}
+
+.events-item a:hover {
+    text-decoration: underline; /* Добавляет подчеркивание при наведении */
+}
+
+/* Медиазапросы */
+@media (max-width: 768px) {
+    .events-item {
+        flex: 0 1 calc(100% - 1rem); /* На меньших экранах один элемент на строку */
+    }
+
+    header {
+        text-align: center; /* Центрируем текст на маленьких экранах */
+    }
+
+    .container {
+        padding: 1rem; /* Уменьшаем отступы на маленьких экранах */
+    }
+}

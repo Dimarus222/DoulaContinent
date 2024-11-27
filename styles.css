@@ -1,0 +1,74 @@
+html, body {
+    height: 100%; /* Устанавливаем высоту для html и body на 100% */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для контейнера */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold; /* Сделаем текст меток жирным */
+}
+
+input {
+    width: 100%;
+    padding: 10px 0 0 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Плавный переход при наведении */
+}
+
+input:focus {
+    border-color: #28a745; /* Подсвечиваем рамку при фокусе */
+    outline: none; /* Убираем стандартный outline */
+}
+
+button {
+    width: 103%;
+    padding: 10px 0px 7px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Увеличиваем размер текста кнопки */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Тень при наведении */
+}
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    color: #28a745;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Уменьшение отступов на маленьких экранах */
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный профиль</title>
+    <link rel="stylesheet" href="touchstyles.css"> <!-- Подключение файла стилей с новым именем -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Личный профиль</h1>
+        <input type="file" accept="image/*" id="avatar-input" style="display:none;" onchange="previewAvatar(event)">
+        <label for="avatar-input" style="cursor: pointer;">
+            <img src="https://via.placeholder.com/100" alt="Аватар" class="avatar" id="avatar">
+        </label>
+        <p>Добро пожаловать, <span id="username"></span>!</p>
+        <p>Адрес электронной почты: <span id="email"></span></p>
+        <p>Возраст: <span id="age"></span></p>
+        <p>О себе: <span id="bio"></span></p>
+        <button class="button" onclick="editProfile()">Редактировать профиль</button>
+
+        <div class="actions">
+            <div class="action">
+                <h4>Изменить пароль</h4>
+                <p>Обновите ваш пароль</p>
+            </div>
+            <div class="action">
+                <h4>Настройки уведомлений</h4>
+                <p>Управляйте уведомлениями</p>
+            </div>
+            <div class="action">
+                <h4>Выход</h4>
+                <p>Выйти из аккаунта</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Получение текущего пользователя из localStorage
+        const username = localStorage.getItem('currentUser');
+        const userData = JSON.parse(localStorage.getItem(username));
+
+        if (userData) {
+            document.getElementById('username').innerText = userData.username;
+            document.getElementById('email').innerText = userData.email;
+            document.getElementById('age').innerText = userData.age;
+            document.getElementById('bio').innerText = userData.bio;
+
+            // Загрузка аватара из localStorage
+            const savedAvatar = localStorage.getItem('userAvatar');
+            document.getElementById('avatar').src = savedAvatar ? savedAvatar : "https://via.placeholder.com/100";
+        } else {
+            // Если пользователь не найден, перенаправляем на страницу входа
+            window.location.href = 'login.html';
+        }
+
+        function editProfile() {
+            alert('Здесь вы можете редактировать профиль!');
+            // Здесь можно добавить функциональность редактирования профиля
+        }
+
+        function previewAvatar(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('avatar').src = e.target.result;
+
+                    // Сохранение аватара в localStorage
+                    localStorage.setItem('userAvatar', e.target.result);
+
+                    // Здесь можно добавить код для сохранения изображения на сервер
+                    // saveAvatar(e.target.result);
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Примерный код для сохранения аватарки на сервер
+        function saveAvatar(dataUrl) {
+            // Представьте, что у вас есть серверная часть, куда можно отправить данные
+            fetch('/save-avatar', {
+                method: 'POST',
+                body: JSON.stringify({ avatar: dataUrl }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Аватар успешно сохранен!');
+                } else {
+                    alert('Ошибка при сохранении аватара.');
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+            });
+        }
+    </script>
+</body>
+
+</html>
