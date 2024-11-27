@@ -1,3 +1,8 @@
+html, body {
+    height: 100%; /* Устанавливаем высоту для html и body на 100% */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
