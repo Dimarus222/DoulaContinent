@@ -1,0 +1,64 @@
+/* header.css */
+header {
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none; /* Показать только на малых экранах */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.header-links {
+    display: none; /* Скрываем меню по умолчанию */
+    flex-direction: column; /* Помещаем ссылки в столбик */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 60px; /* Расположение под заголовком */
+    right: 0;
+    background-color: #333; /* Фон меню */
+    width: 100%; /* Ширина на весь экран */
+    z-index: 1000; /* Чтобы меню было сверху других элементов */
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Отступы для каждого элемента меню */
+    display: block; /* Делаем ссылки блочными, чтобы отступы работали */
+}
+
+/* Отступ между ссылками */
+.header-links a + a {
+    margin-top: 5px; /* Отступ между ссылками */
+}
+
+/* Отступ после последней ссылки */
+.header-links .last {
+    margin-bottom: 5px; /* Отступ под последней ссылкой */
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .header-links.active {
+        display: flex; /* Показываем меню при активном состоянии */
+    }
+
+    .hamburger {
+        display: flex; /* Показываем гамбургер только на малых экранах */
+    }
+}
