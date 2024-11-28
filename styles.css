@@ -7,33 +7,46 @@ html, body {
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
+    display: flex;
+    flex-direction: column; /* Позволяем элементам располагаться вертикально */
 }
+
 header {
     background-color: #333;
-    padding: 1rem; /* Используем rem для отзывчивости */
+    padding: 1rem;
     color: white;
-    display: flex; /* Используем flexbox для выравнивания */
-    justify-content: flex-end; /* Выравнивание по правому краю */
-    align-items: center; /* Вертикальное центрирование */
+    display: flex;
+    justify-content: space-between; /* Выравнивание по краям */
+    align-items: center;
+    flex-wrap: wrap; /* Позволяет ссылкам переноситься на новую строку */
 }
 
 .header-links {
-    display: flex; /* Используем flexbox для расположения ссылок в строку */
+    display: flex;
 }
 
 header a {
     color: white;
     text-decoration: none;
-    margin-left: 1rem; /* Используем rem */
+    margin-left: 1rem;
 }
+
+.container {
+    max-width: 600px; /* Увеличиваем максимальную ширину для больших экранов */
+    margin: 50px auto; /* Центрируем контейнер */
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    flex-grow: 1; /* Делаем контейнер гибким */
+}
+
 footer {
-    background-color:#333; /* Полупрозрачный фон */
+    background-color: #333;
     color: white;
-    text-align: center; /* Центрируем текст */
-    padding: 1rem; /* Отступы */
-    position: relative; /* Относительное позиционирование */
-    bottom: 0; /* Привязываем к низу контейнера */
-    width: 100%; /* Ширина 100% экрана */
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
 }
 
 .footer-links {
@@ -41,28 +54,20 @@ footer {
 }
 
 footer a {
-    color: white; /* Цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
+    color: white;
+    text-decoration: none;
     margin: 0 1rem; /* Расстояние между ссылками */
 }
 
 footer a:hover {
-    text-decoration: underline; /* Добавляем подчеркивание при наведении */
-}
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px; /* Уменьшаем отступы внутри контейнера */
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для контейнера */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
 }
 
 /* Заголовок */
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px; /* Отступ снизу */
+    margin: 0 0 20px 0; /* Отступ снизу */
 }
 
 /* Метки для ввода */
@@ -70,41 +75,41 @@ label {
     display: block;
     margin-bottom: 8px;
     color: #555;
-    font-weight: bold; /* Сделаем текст меток жирным */
+    font-weight: bold;
 }
 
 /* Поля ввода */
 input {
-    width: calc(100% - 20px); /* Уменьшаем ширину для отступов */
-    padding: 10px; /* Общее внутреннее заполнение */
+    width: calc(100% - 20px);
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s; /* Плавный переход при наведении */
+    transition: border-color 0.3s;
 }
 
 /* Эффект при фокусировке */
 input:focus {
-    border-color: #28a745; /* Подсвечиваем рамку при фокусе */
-    outline: none; /* Убираем стандартный outline */
+    border-color: #28a745;
+    outline: none;
 }
 
 /* Кнопка регистрации */
 button {
-    width: calc(100%); /* Уменьшаем ширину для отступов */
-    padding: 10px; /* Общее внутреннее заполнение */
+    width: 100%; /* Установка ширины на 100% */
+    padding: 10px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Увеличиваем размер текста кнопки */
+    font-size: 16px; /* Размер текста кнопки */
     transition: background-color 0.3s;
 }
 
 /* Эффект при наведении на кнопку */
 button:hover {
-    background-color: #218838; /* Тень при наведении */
+    background-color: #218838;
 }
 
 /* Сообщение об результате */
@@ -117,24 +122,39 @@ button:hover {
 /* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
     .container {
-        margin: 20px; /* Уменьшаем отступы по краям на мобильных устройствах */
-        padding: 15px; /* Уменьшение отступов внутри контейнера */
+        margin: 20px; /* Уменьшение отступов для мобильных устройств */
+        padding: 15px; /* Уменьшение внутреннего отступа */
     }
- header {
-        text-align: center; /* Центрируем текст на маленьких экранах */
+
+    header {
+        flex-direction: column; /* Вертикальная ориентация для заголовка на мобильных */
+        align-items: center; /* Центрируем элементы */
     }
+
     h1 {
-        font-size: 1.5em; /* Уменьшаем размер заголовка для маленьких экранов */
+        font-size: 1.5em; /* Уменьшение размера заголовка для маленьких экранов */
     }
 
     input, button {
-        font-size: 14px; /* Уменьшаем размер текста в полях ввода и кнопке */
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
         margin: 10px; /* Минимальное расстояние для маленьких экранов */
-        padding: 10px; /* Уменьшение отступов внутри контейнера */
+        padding: 10px; /* Уменьшение внутреннего отступа */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Дополнительное уменьшение размера заголовка для очень маленьких экранов */
+    }
+
+    header a {
+        margin-left: 0.5rem; /* Уменьшаем отступы между ссылками для компактности */
+    }
+
+    footer a {
+        margin: 0 0.5rem; /* Уменьшаем расстояние между ссылками футера */
     }
 }
