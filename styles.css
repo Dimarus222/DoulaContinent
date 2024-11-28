@@ -11,7 +11,7 @@ body {
 
 .container {
     max-width: 400px;
-    margin: 50px auto;
+    margin:  auto;
     padding: 20px; /* Уменьшаем отступы внутри контейнера */
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для контейнера */
