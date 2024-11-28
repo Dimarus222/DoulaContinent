@@ -100,7 +100,7 @@ h1 {
     }
 }
 footer {
-    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    background-color:black; /* Полупрозрачный фон */
     color: white;
     text-align: center; /* Центрируем текст */
     padding: 1rem; /* Отступы */
@@ -114,7 +114,7 @@ footer {
 }
 
 footer a {
-    color: #CCBA00; /* Цвет ссылок */
+    color: white; /* Цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
     margin: 0 1rem; /* Расстояние между ссылками */
 }
