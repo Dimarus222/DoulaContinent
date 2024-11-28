@@ -26,6 +26,29 @@ header a {
     text-decoration: none;
     margin-left: 1rem; /* Используем rem */
 }
+footer {
+    background-color:#333; /* Полупрозрачный фон */
+    color: white;
+    text-align: center; /* Центрируем текст */
+    padding: 1rem; /* Отступы */
+    position: relative; /* Относительное позиционирование */
+    bottom: 0; /* Привязываем к низу контейнера */
+    width: 100%; /* Ширина 100% экрана */
+}
+
+.footer-links {
+    margin-top: 0.5rem; /* Отступ между текстом и ссылками */
+}
+
+footer a {
+    color: white; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 1rem; /* Расстояние между ссылками */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
 .container {
     max-width: 400px;
     margin: 50px auto;
