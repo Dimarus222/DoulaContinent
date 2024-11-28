@@ -40,7 +40,12 @@ header a {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     flex-grow: 1; /* Делаем контейнер гибким */
 }
-
+.container {
+    min-height: 100vh; /* Или просто height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Выравнивание содержимого по центру */
+}
 footer {
     background-color: #333;
     color: white;
