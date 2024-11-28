@@ -1,59 +1,61 @@
 /* header.css */
 header {
-    background-color: #333;
-    padding: 1rem;
-    color: white;
+    background-color: #333; /* Цвет фона заголовка */
+    padding: 1rem; /* Отступы внутри заголовка */
+    color: white; /* Цвет текста */
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Расположение элементов на краях контейнера */
+    align-items: center; /* Вертикальное центрирование элементов */
 }
 
+/* Стили для гамбургера */
 .hamburger {
-    display: none; /* Показать только на малых экранах */
-    flex-direction: column;
-    cursor: pointer;
+    display: none; /* Скрываем гамбургер по умолчанию */
+    flex-direction: column; /* Вертикальное расположение линий */
+    cursor: pointer; /* Указатель руки при наведении */
 }
 
 .line {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
+    height: 3px; /* Высота линий гамбургера */
+    width: 25px; /* Ширина линий гамбургера */
+    background-color: white; /* Цвет линий гамбургера */
+    margin: 4px 0; /* Отступы между линиями */
 }
 
+/* Стили для меню */
 .header-links {
-    display: none; /* Скрываем меню по умолчанию */
-    flex-direction: column; /* Помещаем ссылки в столбик */
-    position: absolute; /* Абсолютное позиционирование */
-    top: 60px; /* Расположение под заголовком */
-    right: 0;
-    background-color: #333; /* Фон меню */
-    width: 100%; /* Ширина на весь экран */
-    z-index: 1000; /* Чтобы меню было сверху других элементов */
+    display: flex; /* Отображаем меню как флекс-контейнер */
+    flex-direction: row; /* Горизонтальное размещение ссылок по умолчанию */
+    position: relative; /* Относительное позиционирование */
+    z-index: 1000; /* Устанавливаем порядок наложения */
 }
 
 .header-links a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
     padding: 10px 15px; /* Отступы для каждого элемента меню */
-    display: block; /* Делаем ссылки блочными, чтобы отступы работали */
 }
 
 /* Отступ между ссылками */
 .header-links a + a {
-    margin-top: 5px; /* Отступ между ссылками */
-}
-
-/* Отступ после последней ссылки */
-.header-links .last {
-    margin-bottom: 5px; /* Отступ под последней ссылкой */
+    margin-left: 5px; /* Отступ между ссылками */
 }
 
 /* Адаптивные стили */
 @media (max-width: 600px) {
+    .header-links {
+        display: none; /* Скрываем меню по умолчанию на мобильных */
+        flex-direction: column; /* Вертикальное размещение ссылок на мобильных */
+        position: absolute; /* Абсолютное позиционирование для выпадающего меню */
+        top: 60px; /* Расположение под заголовком */
+        right: 0; /* Выравнивание по правому краю */
+        background-color: #333; /* Фоновый цвет меню */
+        width: 100%; /* Ширина на весь экран */
+    }
+    
     .header-links.active {
         display: flex; /* Показываем меню при активном состоянии */
     }
