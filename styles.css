@@ -51,7 +51,7 @@ input:focus {
 
 /* Кнопка регистрации */
 button {
-    width: calc(100% - 20px); /* Уменьшаем ширину для отступов */
+    width: calc(100%); /* Уменьшаем ширину для отступов */
     padding: 10px; /* Общее внутреннее заполнение */
     background-color: #28a745;
     color: white;
