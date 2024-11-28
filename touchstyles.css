@@ -4,7 +4,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
+html, body {
+    height: 100%; /* Работает с 100% высотой для фона */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
+    background-size: cover; /* Фон будет масштабироваться без искажений */
+}
 .container {
     max-width: 600px;
     margin: 50px auto;
