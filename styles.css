@@ -1,24 +1,38 @@
 header {
     background-color: #333;
-    padding: 1rem; /* Используем rem для отзывчивости */
+    padding: 1rem;
     color: white;
+}
+
+.header-container {
     display: flex;
-    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку */
-    justify-content: flex-end; /* Выравнивание по правому краю */
-    align-items: center; /* Вертикальное центрирование */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none; /* Показать только на малых экранах */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
 }
 
 .header-links {
-    display: flex;
-    flex-wrap: wrap; /* Позволяет ссылкам переноситься на несколько строк */
+    display: flex; /* По умолчанию показываем ссылки */
+    flex-wrap: wrap;
 }
 
 header a {
     color: white;
     text-decoration: none;
-    margin-left: 1rem; /* Используем rem для отступов */
+    margin-left: 1rem;
 }
-
 /* Обновленный CSS для body и .container */
 html, body {
     height: 100%; /* Работает с 100% высотой для фона */
@@ -111,15 +125,26 @@ button:hover {
         padding: 10px; /* Уменьшение отступов внутри контейнера */
     }
 }
-@media (max-width: 600px) { /* Проверка ширины экрана для мобильных устройств */
-    header {
-        justify-content: center; /* Центрируем ссылки на маленьких экранах */
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .header-links {
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column; /* Помещаем ссылки в столбик */
+        position: absolute; /* Абсолютное позиционирование */
+        top: 60px; /* Расположение под заголовком */
+        right: 0;
+        background-color: #333; /* Фон меню */
+        width: 100%; /* Ширина на весь экран */
+        z-index: 1000; /* Чтобы меню было сверху других элементов */
     }
 
-    header a {
-        flex: 1 1 100%; /* Каждая ссылка занимает 100% ширины родительского блока */
-        text-align: center; /* Центрируем текст ссылок */
-        margin-left: 0; /* Убираем отступы слева для переносимых ссылок */
-        margin-bottom: 0.5rem; /* Небольшой отступ снизу для разделения ссылок */
+    .header-links.active {
+        display: flex; /* Показываем меню при активном состоянии */
+    }
+
+    .hamburger {
+        display: flex; /* Показываем гамбургер только на малых экранах */
     }
 }
+
+
