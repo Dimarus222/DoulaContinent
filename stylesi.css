@@ -14,7 +14,19 @@ body {
 h1 {
     color: #FFA50F;
 }
+h3 {
+    color: white;
+    text-decoration: none;
+}
 
+a {
+    color: white; /* Задаем белый цвет для ссылок */
+    text-decoration: none; /* Убираем подчеркивание для ссылок по умолчанию */
+}
+
+a:hover {
+    text-decoration: underline; /* Добавляет подчеркивание при наведении */
+}
 .container2 {
     display: flex;
     align-items: center;
