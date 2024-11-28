@@ -10,7 +10,7 @@ header {
     padding: 1rem; /* Используем rem для отзывчивости */
     color: white;
     display: flex; /* Используем flexbox для выравнивания */
-    justify-content: flex-end; /* Выравнивание по правому краю */
+    justify-content: flex; /* Выравнивание по левому краю */
     align-items: center; /* Вертикальное центрирование */
 }
 
