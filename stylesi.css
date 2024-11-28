@@ -86,7 +86,7 @@ h1 {
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -104,7 +104,7 @@ footer {
 }
 
 footer a {
-    color: #CCBA00;
+    color: white;
     text-decoration: none;
     margin: 0 0.5rem; /* Уменьшаем расстояние между ссылками для мобильных окон */
 }
