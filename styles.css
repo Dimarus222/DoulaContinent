@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
+        background: linear-gradient(-35deg, #00FF8E, #00BFFF, #1D67CD);
     background-size: cover; /* Фон будет масштабироваться без искажений */
 }
 
