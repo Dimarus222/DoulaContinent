@@ -99,3 +99,26 @@ h1 {
         padding: 1rem; /* Уменьшаем отступы на маленьких экранах */
     }
 }
+footer {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    color: white;
+    text-align: center; /* Центрируем текст */
+    padding: 1rem; /* Отступы */
+    position: relative; /* Относительное позиционирование */
+    bottom: 0; /* Привязываем к низу контейнера */
+    width: 100%; /* Ширина 100% экрана */
+}
+
+.footer-links {
+    margin-top: 0.5rem; /* Отступ между текстом и ссылками */
+}
+
+footer a {
+    color: #CCBA00; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 1rem; /* Расстояние между ссылками */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
