@@ -1,6 +1,6 @@
 html, body {
     height: 100%; /* Устанавливаем высоту на 100%, чтобы фон занимал весь экран */
-    margin: 50px auto;
+    margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
