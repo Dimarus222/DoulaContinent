@@ -100,7 +100,7 @@ h1 {
     }
 }
 footer {
-    background-color:black; /* Полупрозрачный фон */
+    background-color:#333; /* Полупрозрачный фон */
     color: white;
     text-align: center; /* Центрируем текст */
     padding: 1rem; /* Отступы */
