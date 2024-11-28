@@ -4,41 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
 }
-header {
-    background-color: #333;
-    padding: 1rem;
-    color: white;
-}
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hamburger {
-    display: none; /* Показать только на малых экранах */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.line {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-.header-links {
-    display: flex; /* По умолчанию показываем ссылки */
-    flex-wrap: wrap;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1rem;
-}
 .container {
     padding: 2rem; /* Используем rem */
     text-align: center;
@@ -107,26 +73,5 @@ h1 {
     }
     .container {
         padding: 1rem; /* Уменьшаем отступы на маленьких экранах */
-    }
-}
-/* Адаптивные стили */
-@media (max-width: 600px) {
-    .header-links {
-        display: none; /* Скрываем меню по умолчанию */
-        flex-direction: column; /* Помещаем ссылки в столбик */
-        position: absolute; /* Абсолютное позиционирование */
-        top: 60px; /* Расположение под заголовком */
-        right: 0;
-        background-color: #333; /* Фон меню */
-        width: 100%; /* Ширина на весь экран */
-        z-index: 1000; /* Чтобы меню было сверху других элементов */
-    }
-
-    .header-links.active {
-        display: flex; /* Показываем меню при активном состоянии */
-    }
-
-    .hamburger {
-        display: flex; /* Показываем гамбургер только на малых экранах */
     }
 }
