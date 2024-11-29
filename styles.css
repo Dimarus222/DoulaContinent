@@ -1,120 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+
+
+/* Обновленный CSS для body и .container */
 html, body {
     height: 100%; /* Работает с 100% высотой для фона */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(-35deg, #0CCBA0, #1D67CD);
+        background: linear-gradient(-35deg, #00FF8E, #00BFFF, #1D67CD);
     background-size: cover; /* Фон будет масштабироваться без искажений */
 }
+
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto; /* Устанавливаем отступ сверху 50 пикселей и центрируем */
+    padding: 20px; /* Уменьшаем отступы внутри контейнера */
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для контейнера */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовок */
+h1 {
     text-align: center;
-}
-
-h1,a{
     color: #333;
-    margin-bottom: 20px;
-}
-a {
-    text-decoration: none; /* Убирает нижнее подчеркивание */
+    margin-bottom: 20px; /* Отступ снизу */
 }
 
-a:hover {
-    text-decoration: underline; /* Добавляет подчеркивание при наведении */
+/* Остальные стили остаются без изменений */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold; /* Сделаем текст меток жирным */
 }
 
-.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 2px solid #007bff;
-    transition: transform 0.3s;
+input {
+    width: calc(100% - 20px); /* Уменьшаем ширину для отступов */
+    padding: 10px; /* Общее внутреннее заполнение */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
 }
 
-.avatar:hover {
-    transform: scale(1.05);
+input:focus {
+    border-color: #28a745; /* Подсвечиваем рамку при фокусе */
+    outline: none; /* Убираем стандартный outline */
 }
 
-p {
-    font-size: 18px;
-    color: #666;
-}
-
-.button {
-    background-color: #007bff;
+button {
+    width: calc(100%); /* Уменьшаем ширину для отступов */
+    padding: 10px; /* Общее внутреннее заполнение */
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px; /* Увеличиваем размер текста кнопки */
     transition: background-color 0.3s;
 }
 
-.button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #218838; /* Тень при наведении */
 }
 
-.actions {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
+#message {
+    margin-top: 15px;
+    text-align: center;
+    color: #28a745;
 }
 
-.action {
-    background: #e9ecef;
-    border-radius: 5px;
-    padding: 10px;
-    width: 30%;
-    transition: transform 0.3s;
-}
-
-.action:hover {
-    transform: translateY(-5px);
-    background: #d3d3d3;
-}
-/* Стили для мобильных устройств */
+/* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
     .container {
-        margin: 20px; /* Уменьшение отступов для мобильных устройств */
-        padding: 10px; /* Уменьшение внутреннего отступа */
+        margin: 25px auto; /* Уменьшаем отступы по краям на мобильных устройствах */
+        padding: 10px;
     }
 
     h1 {
-        font-size: 24px; /* Уменьшение размера заголовка */
+        font-size: 1.5em; /* Уменьшаем размер заголовка для маленьких экранов */
     }
 
-    p {
-        font-size: 16px; /* Уменьшение размера текста абзацев */
+    input, button {
+        font-size: 14px; /* Уменьшаем размер текста в полях ввода и кнопке */
     }
+}
 
-    .avatar {
-        width: 100px; /* Уменьшение размера аватара на мобильных устройствах */
-        height: 100px;
-    }
-
-    .button {
-        padding: 12px; /* Увеличение отступов для удобства на мобильных */
-    }
-
-    .actions {
-        flex-direction: column; /* Изменение направления для мобильных */
-        align-items: center; /* Центрирование элементов */
-    }
-    
-    .action {
-        width: 30%; /* Уменьшение ширины действий */
-        margin-bottom: 10px; /* Отступ между действиями */
+@media (max-width: 480px) {
+    .container {
+        margin: 50px auto; /* Минимальное расстояние для маленьких экранов */
+        padding: 10px; /* Уменьшение отступов внутри контейнера */
     }
 }
