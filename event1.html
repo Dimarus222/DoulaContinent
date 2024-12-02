@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+</head>
+<body>
+    <header>
+        <h1>Последние новости</h1>
+    </header>
+    <div class="news-summary">
+        <h2>Заголовок новости</h2>
+        <p>Краткое описание: Здесь находится краткая информация о новости. Узнайте больше, нажав на кнопку ниже.</p>
+        <button onclick="toggleDetails()">Читать далее</button>
+        <div class="details" id="details" style="display: none;">
+            <h3>Подробности новости</h3>
+            <p>Здесь вы можете раскрыть все детали вашей новости. Напишите здесь всю необходимую информацию, включая факты, мнения и другие интересные детали.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById('details');
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
