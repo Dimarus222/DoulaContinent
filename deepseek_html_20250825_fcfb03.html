@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doula Continent - Боевой Континент</title>
+    <meta name="description" content="Фанатский сайт по вселенной Боевого Континента. Разбор персонажей, духовных зверей, кланов и боевых духов.">
+    <meta name="keywords" content="Боевой Континент, Doula Continent, персонажи, боевые духи, кланы, духовные звери, разбор">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8e1c1c;
+            --secondary-color: #d4af37;
+            --accent-color: #8b0000;
+            --dark-color: #2c1810;
+            --light-color: #f8f4e3;
+            --text-color: #3a2c2c;
+            --text-light: #7a6a6a;
+            --bg-color: #f9f3e9;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+            --gold-gradient: linear-gradient(135deg, #d4af37, #f9e076);
+            --section-padding: 2rem;
+            --card-padding: 1.5rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--dark-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+        }
+
+        .mobile-menu-btn span {
+            width: 30px;
+            height: 3px;
+            background: var(--secondary-color);
+            border-radius: 5px;
+            transition: var(--transition);
+            position: relative;
+            transform-origin: 1px;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        /* Page Styles */
+        .page {
+            display: none;
+            min-height: calc(100vh - 200px);
+            padding: var(--section-padding) 0;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: auto;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: 'Ma Shan Zheng', cursive;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            line-height: 1.8;
+            padding: 0 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: var(--gold-gradient);
+            color: var(--dark-color);
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            margin: 1rem 0;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gold-gradient);
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .card-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: var(--card-padding);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            text-align: justify;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background-color: var(--light-color);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .tag-clan {
+            background-color: #f8e5e5;
+            color: var(--primary-color);
+        }
+
+        .tag-spirit {
+            background-color: #f5eef8;
+            color: #6b2c90;
+        }
+
+        .tag-rank {
+            background-color: #fef5e7;
+            color: var(--secondary-color);
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--gold-gradient);
+            color: var(--dark-color);
+            border-radius: 50%;
+            font-size: 1.8rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: 'Ma Shan Zheng', cursive;
+            color: var(--secondary-color);
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold-gradient);
+        }
+
+        .footer-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+            padding: 0 1rem;
+        }
+
+        /* Detail Pages */
+        .detail-container {
+            padding: 0 1rem;
+        }
+
+        .detail-header {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 992px) {
+            .detail-header {
+                flex-direction: row;
+            }
+        }
+
+        .detail-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 5px solid var(--card-bg);
+        }
+
+        .detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .detail-info {
+            flex: 2;
+            background-color: var(--card-bg);
+            padding: var(--card-padding);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            height: auto;
+            min-height: 400px;
+        }
+
+        .detail-info h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .detail-info p {
+            text-align: justify;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            padding: 1rem;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            height: auto;
+        }
+
+        .info-item h3 {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            font-weight: bold;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .abilities-list, .members-list, .beasts-list {
+            margin-top: 2rem;
+        }
+
+        .ability-item, .member-item, .beast-item {
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .ability-header, .member-header, .beast-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+
+        .ability-header h3, .member-header h3, .beast-header h3 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+
+        .ability-content, .member-content, .beast-content {
+            padding: 1rem;
+            background-color: var(--light-color);
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            display: none;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .ability-content.active, .member-content.active, .beast-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            background: var(--gold-gradient);
+            color: var(--dark-color);
+            border-radius: 30px;
+            font-weight: bold;
+            transition: var(--transition);
+            margin-left: 1rem;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        /* Home Page Specific */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 0 1rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: var(--card-padding);
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: var(--transition);
+            height: auto;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .feature-card p {
+            text-align: justify;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .about-section {
+            background: var(--card-bg);
+            padding: var(--card-padding);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin: 0 1rem 2rem 1rem;
+        }
+
+        .about-section p {
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                position: absolute;
+                top: 1.5rem;
+                right: 1rem;
+            }
+
+            .detail-header {
+                flex-direction: column;
+            }
+            
+            .hero {
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-dragon"></i>
+                    Doula Continent
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <ul id="main-nav">
+                        <li><a href="#" data-page="home">Главная</a></li>
+                        <li><a href="#" data-page="characters">Персонажи</a></li>
+                        <li><a href="#" data-page="spirits">Боевые Духи</a></li>
+                        <li><a href="#" data-page="beasts">Духовные Звери</a></li>
+                        <li><a href="#" data-page="clans">Кланы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Doula Continent - Боевой Континент</h1>
+                    <p>Добро пожаловать на официальный фанатский сайт, посвященный вселенной "Боевого Континента". Здесь вы найдете подробные разборы персонажей, боевых духов, духовных зверей и кланов. Наш ресурс создан для истинных поклонников произведения, чтобы делиться знаниями, анализировать сюжетные повороты и обсуждать развитие персонажей.</p>
+                    <a href="#" class="btn" data-page="characters">Исследовать вселенную</a>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-maximize"></i></a>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Персонажи</h3>
+                    <p>Подробные описания всех ключевых персонажей вселенной Боевого Континента, их способностей, развития и роли в сюжете. Узнайте о сильных и слабых сторонах каждого героя, их мотивации и взаимоотношениях с другими персонажами.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ghost"></i>
+                    </div>
+                    <h3>Боевые Духи</h3>
+                    <p>Полная информация о различных типах боевых духов, их классификации, сильных и слабых сторонах. Изучите уникальные способности каждого духа, методы их пробуждения и развития, а также советы по максимально эффективному использованию их силы в бою.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Духовные Звери</h3>
+                    <p>Энциклопедия духовных зверей с описанием их способностей, мест обитания и методов приручения. Узнайте, как правильно взаимодействовать с этими могущественными существами, использовать их силу и заключать с ними договоры.</p>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <div class="section-title">
+                    <h2>О нашем проекте</h2>
+                </div>
+                <p>
+                    Наш сайт был создан с целью объединить всех поклонников великолепного произведения "Боевой Континент". Мы тщательно собираем и анализируем информацию о вселенной, персонажах и их способностях, чтобы предоставить вам наиболее полную и точную информацию.
+                </p>
+                <p>
+                    Здесь вы найдете эксклюзивные материалы, которые помогут вам лучше понять сюжетные повороты, мотивацию персонажей и скрытые детали мира Боевого Континента. Наша команда постоянно работает над расширением и обновлением базы данных.
+                </p>
+                <p>
+                    Присоединяйтесь к нашему сообществу в социальных сетях, чтобы быть в курсе всех обновлений и участвовать в обсуждениях с другими фанатами!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Characters Page -->
+    <div id="characters" class="page">
+        <div class="container">
+            <a href="#" class="back-btn" data-page="home"><i class="fas fa-arrow-left"></i> На главную</a>
+            <div class="section-title">
+                <h2>Персонажи</h2>
+            </div>
+            <div class="card-grid" id="characters-grid">
+                <!-- Character cards will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Detail Page -->
+    <div id="character-detail" class="page">
+        <div class="container detail-container">
+            <a href="#" class="back-btn" id="back-to-characters"><i class="fas fa-arrow-left"></i> Назад к персонажам</a>
+            <div class="detail-header">
+                <div class="detail-image">
+                    <img id="detail-character-image" src="" alt="Character Image">
+                </div>
+                <div class="detail-info">
+                    <h1 id="detail-character-name"></h1>
+                    <p id="detail-character-description"></p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Кланы</h3>
+                            <p id="detail-character-clans"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Боевой Дух</h3>
+                            <p id="detail-character-spirit"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Тип Боевого Духа</h3>
+                            <p id="detail-character-spirit-type"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Ранг Боевого Духа</h3>
+                            <p id="detail-character-spirit-rank"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Уровень персонажа</h3>
+                            <p id="detail-character-level"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Ранг</h3>
+                            <p id="detail-character-rank"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="abilities-list">
+                <h2>Способности</h2>
+                <div id="detail-character-abilities">
+                    <!-- Abilities will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spirits Page -->
+    <div id="spirits" class="page">
+        <div class="container">
+            <a href="#" class="back-btn" data-page="home"><i class="fas fa-arrow-left"></i> На главную</a>
+            <div class="section-title">
+                <h2>Боевые Духи</h2>
+            </div>
+            <div class="card-grid" id="spirits-grid">
+                <!-- Spirit cards will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Spirit Detail Page -->
+    <div id="spirit-detail" class="page">
+        <div class="container detail-container">
+            <a href="#" class="back-btn" id="back-to-spirits"><i class="fas fa-arrow-left"></i> Назад к духам</a>
+            <div class="detail-header">
+                <div class="detail-image">
+                    <img id="detail-spirit-image" src="" alt="Spirit Image">
+                </div>
+                <div class="detail-info">
+                    <h1 id="detail-spirit-name"></h1>
+                    <p id="detail-spirit-description"></p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Тип</h3>
+                            <p id="detail-spirit-type"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Ранг</h3>
+                            <p id="detail-spirit-rank"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Владельцы</h3>
+                            <p id="detail-spirit-owners"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Сродство</h3>
+                            <p id="detail-spirit-affinity"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="abilities-list">
+                <h2>Способности</h2>
+                <div id="detail-spirit-abilities">
+                    <!-- Abilities will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beasts Page -->
+    <div id="beasts" class="page">
+        <div class="container">
+            <a href="#" class="back-btn" data-page="home"><i class="fas fa-arrow-left"></i> На главную</a>
+            <div class="section-title">
+                <h2>Духовные Звери</h2>
+            </div>
+            <div class="card-grid" id="beasts-grid">
+                <!-- Beast cards will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Beast Detail Page -->
+    <div id="beast-detail" class="page">
+        <div class="container detail-container">
+            <a href="#" class="back-btn" id="back-to-beasts"><i class="fas fa-arrow-left"></i> Назад к зверям</a>
+            <div class="detail-header">
+                <div class="detail-image">
+                    <img id="detail-beast-image" src="" alt="Beast Image">
+                </div>
+                <div class="detail-info">
+                    <h1 id="detail-beast-name"></h1>
+                    <p id="detail-beast-description"></p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Тип</h3>
+                            <p id="detail-beast-type"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Ранг</h3>
+                            <p id="detail-beast-rank"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Среда обитания</h3>
+                            <p id="detail-beast-habitat"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Особенности</h3>
+                            <p id="detail-beast-features"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="abilities-list">
+                <h2>Способности</h2>
+                <div id="detail-beast-abilities">
+                    <!-- Abilities will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clans Page -->
+    <div id="clans" class="page">
+        <div class="container">
+            <a href="#" class="back-btn" data-page="home"><i class="fas fa-arrow-left"></i> На главную</a>
+            <div class="section-title">
+                <h2>Кланы</h2>
+            </div>
+            <div class="card-grid" id="clans-grid">
+                <!-- Clan cards will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Clan Detail Page -->
+    <div id="clan-detail" class="page">
+        <div class="container detail-container">
+            <a href="#" class="back-btn" id="back-to-clans"><i class="fas fa-arrow-left"></i> Назад к кланам</a>
+            <div class="detail-header">
+                <div class="detail-image">
+                    <img id="detail-clan-image" src="" alt="Clan Image">
+                </div>
+                <div class="detail-info">
+                    <h1 id="detail-clan-name"></h1>
+                    <p id="detail-clan-description"></p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Основатель</h3>
+                            <p id="detail-clan-founder"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Территория</h3>
+                            <p id="detail-clan-territory"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Статус</h3>
+                            <p id="detail-clan-status"></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Специализация</h3>
+                            <p id="detail-clan-specialization"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="members-list">
+                <h2>Известные члены клана</h2>
+                <div id="detail-clan-members">
+                    <!-- Members will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О нас</h3>
+                    <p>Fan-сайт, посвященный вселенной "Боевого Континента". Мы собираем и анализируем информацию о персонажах, боевых духах, духовных зверях и кланах этой удивительной вселенной.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-page="home">Главная</a></li>
+                        <li><a href="#" data-page="characters">Персонажи</a></li>
+                        <li><a href="#" data-page="spirits">Боевые Духи</a></li>
+                        <li><a href="#" data-page="beasts">Духовные Звери</a></li>
+                        <li><a href="#" data-page="clans">Кланы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Социальные сети</h3>
+                    <p>Подписывайтесь на наши социальные сети, чтобы быть в курсе обновлений и новых материалов.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fas fa-maximize"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Doula Continent - Боевой Континент. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample data for characters
+        const charactersData = [
+            {
+                id: 1,
+                name: "Тан Сань",
+                image: "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Главный герой, обладающий невероятной силой и уникальными способностями.",
+                clans: ["Небесный зал", "Клан Тан"],
+                spirit: "Синий серебряный травяной меч",
+                spiritType: "Звериный",
+                spiritRank: "Высший",
+                level: 96,
+                rank: "Верховный бог-король",
+                description: "Тан Сань - главный герой произведения 'Боевой Континент'. Обладатель уникального боевого духа 'Синий серебряный травяной меч'. Прошел долгий путь от слабого духом мальчика до одного из сильнейших бойцов континента. Его решимость, талант и удача помогли ему преодолеть все трудности и достичь вершины силы. Несмотря на все испытания, он сохранил доброе сердце и всегда готов помочь тем, кто в этом нуждается.",
+                abilities: [
+                    {
+                        name: "Синий серебряный дракон - проявление",
+                        description: "Позволяет призывать дух синего серебряного дракона для атаки или защиты. Эта способность проявляется в критических ситуациях и требует большой концентрации духовной энергии."
+                    },
+                    {
+                        name: "Императорский дух - усиление",
+                        description: "Увеличивает все параметры на короткое время, делая Тан Саня практически непобедимым. В этом состоянии его скорость, сила и выносливость многократно возрастают."
+                    },
+                    {
+                        name: "Небесный меч",
+                        description: "Мощнейшая атака, концентрирующая всю духовную энергию в одном ударе. Способна разрушать даже самые прочные защиты и наносить катастрофический урон противникам."
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: "Сяо У",
+                image: "https://images.unsplash.com/photo-1566577134777-4d0fadeb4c58?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Верная подруга и соратница Тан Саня, обладающая сильным боевым духом.",
+                clans: ["Небесный зал", "Клан Сяо"],
+                spirit: "Нефритовый заяц",
+                spiritType: "Звериный",
+                spiritRank: "Высший",
+                level: 94,
+                rank: "Бог-король",
+                description: "Сяо У - одна из ключевых персонажей произведения. Её боевой дух 'Нефритовый заяц' обладает не только боевыми, но и лечебными способностями. Она всегда поддерживает Тан Саня в трудные моменты и является его главной опорой. Её характер сочетает в себе нежность и силу, что делает её уникальной воительницей.",
+                abilities: [
+                    {
+                        name: "Исцеляющий свет",
+                        description: "Исцеляет союзников и восстанавливает их духовную энергию. Эта способность особенно эффективна в длительных битвах, позволяя союзникам продолжать сражаться."
+                    },
+                    {
+                        name: "Удар нефритовой лапой",
+                        description: "Мощная атака, наносящая урон и замедляющая противника. Сочетает в себе физическую силу и духовную энергию для максимальной эффективности."
+                    },
+                    {
+                        name: "Заячья ловкость",
+                        description: "Значительно увеличивает скорость и ловкость на короткое время. Позволяет избегать атак и быстро менять позицию на поле боя."
+                    }
+                ]
+            }
+        ];
+
+        // Sample data for spirits
+        const spiritsData = [
+            {
+                id: 1,
+                name: "Синий серебряный травяной меч",
+                image: "https://images.unsplash.com/photo-1545156521-77bd85671d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Легендарный боевой дух, обладающий огромной силой и потенциалом.",
+                type: "Звериный",
+                rank: "Высший",
+                owners: "Тан Сань",
+                affinity: "Высшая",
+                description: "Синий серебряный травяной меч - один из самых редких и мощных боевых духов во вселенной Боевого Континента. Этот дух обладает уникальной способностью к эволюции и адаптации, что делает его невероятно опасным в руках опытного владельца. Он сочетает в себе качества как звериного, так и инструментального духа, что является крайне редким явлением.",
+                abilities: [
+                    {
+                        name: "Эволюция духа",
+                        description: "Способность развиваться и приобретать новые формы в зависимости от силы и потребностей владельца."
+                    },
+                    {
+                        name: "Адаптация",
+                        description: "Может приспосабливаться к различным стихиям и типам атак, создавая эффективные контрмеры."
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: "Нефритовый заяц",
+                image: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Редкий боевой дух, сочетающий боевые и лечебные способности.",
+                type: "Звериный",
+                rank: "Высший",
+                owners: "Сяо У",
+                affinity: "Высшая",
+                description: "Нефритовый заяц - уникальный боевой дух, который редко встречается на континенте. Он сочетает в себе боевые способности с мощными целительскими свойствами, что делает его невероятно ценным. Владелец этого духа может не только сражаться, но и поддерживать союзников в бою.",
+                abilities: [
+                    {
+                        name: "Целительная аура",
+                        description: "Создает область, в которой союзники постепенно восстанавливают здоровье и духовную энергию."
+                    },
+                    {
+                        name: "Лунный удар",
+                        description: "Атака, усиленная лунной энергией, наносящая дополнительный урон темным духам."
+                    }
+                ]
+            }
+        ];
+
+        // Sample data for beasts
+        const beastsData = [
+            {
+                id: 1,
+                name: "Синий серебряный дракон",
+                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Древний и могущественный духовный зверь, покровитель клана Тан.",
+                type: "Дракон",
+                rank: "Божественный",
+                habitat: "Древние горы",
+                features: "Управление стихиями, полет, телепатия",
+                description: "Синий серебряный дракон - один из древнейших и самых могущественных духовных зверей на континенте. Считается, что он является хранителем древних знаний и平衡 в мире. Его чешуя обладает невероятной прочностью, а дыхание может управлять стихиями. Немногие удостаиваются чести встретить этого величественного зверя, и еще меньшее число людей могут заключить с ним договор.",
+                abilities: [
+                    {
+                        name: "Дыхание стихий",
+                        description: "Может выдыхать потоки огня, льда или молний, в зависимости от ситуации."
+                    },
+                    {
+                        name: "Древняя мудрость",
+                        description: "Обладает знаниями тысячелетий, которыми может делиться с достойным партнером."
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: "Нефритовый заяц",
+                image: "https://images.unsplash.com/photo-1559645309-1d5c21f27517?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Духовный зверь, символизирующий ловкость и исцеление.",
+                type: "Звериный",
+                rank: "Высший",
+                habitat: "Лунные рощи",
+                features: "Быстрое перемещение, целительные способности",
+                description: "Нефритовый заяц - духовный зверь, тесно связанный с лунной энергией. Он обладает невероятной скоростью и способностью исцелять раны. Считается, что те, кому посчастливилось заключить договор с нефритовым зайцем, обретают долголетие и духовную clarity.",
+                abilities: [
+                    {
+                        name: "Лунный прыжок",
+                        description: "Может перемещаться на огромные расстояния за мгновение, используя лунную энергию."
+                    },
+                    {
+                        name: "Исцеляющее прикосновение",
+                        description: "Лечит раны и восстанавливает духовную энергию прикосновением."
+                    }
+                ]
+            }
+        ];
+
+        // Sample data for clans
+        const clansData = [
+            {
+                id: 1,
+                name: "Небесный зал",
+                image: "https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Один из сильнейших кланов на континенте, воспитавший многих могущественных бойцов.",
+                founder: "Тан Хао",
+                territory: "Центральные равнины",
+                status: "Активный",
+                specialization: "Боевые искусства, духовное развитие",
+                description: "Небесный зал - один из самых влиятельных и сильных кланов на Боевом Континенте. Основанный легендарным Тан Хао, клан славится своими уникальными техниками боя и методами духовного развития. Многие из величайших бойцов континента были воспитаны в стенах Небесного зала. Клан поддерживает баланс между традициями и инновациями, постоянно развивая свои техники.",
+                members: [
+                    {
+                        name: "Тан Сань",
+                        role: "Ведущий ученик",
+                        description: "Главный протагонист, обладатель уникального боевого духа."
+                    },
+                    {
+                        name: "Флань Дэ",
+                        role: "Старейшина",
+                        description: "Опытный наставник, специалист по духовным зверям."
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: "Клан Тан",
+                image: "https://images.unsplash.com/photo-1519897831810-a9a01aceccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                shortDescription: "Древний клан, известный своими уникальными техниками и боевыми духами.",
+                founder: "Неизвестен",
+                territory: "Восточные земли",
+                status: "Активный",
+                specialization: "Изготовление оружия, скрытые техники",
+                description: "Клан Тан - один из древнейших кланов на континенте, с богатой историей и традициями. Они известны своими уникальными методами изготовления оружия и скрытыми боевыми техниками, передающимися из поколения в поколение. Члены клана обладают глубокими знаниями о боевых духах и способах их развития.",
+                members: [
+                    {
+                        name: "Тан Сань",
+                        role: "Наследник клана",
+                        description: "Потомок основателей клана, носитель древних знаний."
+                    },
+                    {
+                        name: "Тан Хао",
+                        role: "Глава клана",
+                        description: "Опытный лидер, мастер боевых искусств."
+                    }
+                ]
+            }
+        ];
+
+        // DOM elements
+        const pages = document.querySelectorAll('.page');
+        const charactersGrid = document.getElementById('characters-grid');
+        const spiritsGrid = document.getElementById('spirits-grid');
+        const beastsGrid = document.getElementById('beasts-grid');
+        const clansGrid = document.getElementById('clans-grid');
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const mainNav = document.getElementById('main-nav');
+        const navLinks = document.querySelectorAll('nav a');
+
+        // Generate character cards
+        function generateCharacterCards() {
+            charactersData.forEach(character => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img">
+                        <img src="${character.image}" alt="${character.name}">
+                    </div>
+                    <div class="card-content">
+                        <h3>${character.name}</h3>
+                        <p>${character.shortDescription}</p>
+                        <div class="card-tags">
+                            <span class="tag tag-clan">${character.clans[0]}</span>
+                            <span class="tag tag-spirit">${character.spirit}</span>
+                            <span class="tag tag-rank">${character.rank}</span>
+                        </div>
+                    </div>
+                `;
+                card.addEventListener('click', () => showCharacterDetail(character));
+                charactersGrid.appendChild(card);
+            });
+        }
+
+        // Generate spirit cards
+        function generateSpiritCards() {
+            spiritsData.forEach(spirit => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img">
+                        <img src="${spirit.image}" alt="${spirit.name}">
+                    </div>
+                    <div class="card-content">
+                        <h3>${spirit.name}</h3>
+                        <p>${spirit.shortDescription}</p>
+                        <div class="card-tags">
+                            <span class="tag tag-clan">${spirit.type}</span>
+                            <span class="tag tag-rank">${spirit.rank}</span>
+                        </div>
+                    </div>
+                `;
+                card.addEventListener('click', () => showSpiritDetail(spirit));
+                spiritsGrid.appendChild(card);
+            });
+        }
+
+        // Generate beast cards
+        function generateBeastCards() {
+            beastsData.forEach(beast => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img">
+                        <img src="${beast.image}" alt="${beast.name}">
+                    </div>
+                    <div class="card-content">
+                        <h3>${beast.name}</h3>
+                        <p>${beast.shortDescription}</p>
+                    </div>
+                `;
+                card.addEventListener('click', () => showBeastDetail(beast));
+                beastsGrid.appendChild(card);
+            });
+        }
+
+        // Generate clan cards
+        function generateClanCards() {
+            clansData.forEach(clan => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img">
+                        <img src="${clan.image}" alt="${clan.name}">
+                    </div>
+                    <div class="card-content">
+                        <h3>${clan.name}</h3>
+                        <p>${clan.shortDescription}</p>
+                    </div>
+                `;
+                card.addEventListener('click', () => showClanDetail(clan));
+                clansGrid.appendChild(card);
+            });
+        }
+
+        // Show character detail
+        function showCharacterDetail(character) {
+            showPage('character-detail');
+            
+            // Populate detail data
+            document.getElementById('detail-character-image').src = character.image;
+            document.getElementById('detail-character-name').textContent = character.name;
+            document.getElementById('detail-character-description').textContent = character.description;
+            document.getElementById('detail-character-clans').textContent = character.clans.join(', ');
+            document.getElementById('detail-character-spirit').textContent = character.spirit;
+            document.getElementById('detail-character-spirit-type').textContent = character.spiritType;
+            document.getElementById('detail-character-spirit-rank').textContent = character.spiritRank;
+            document.getElementById('detail-character-level').textContent = character.level;
+            document.getElementById('detail-character-rank').textContent = character.rank;
+            
+            // Populate abilities
+            const abilitiesContainer = document.getElementById('detail-character-abilities');
+            abilitiesContainer.innerHTML = '';
+            
+            character.abilities.forEach(ability => {
+                const abilityElement = document.createElement('div');
+                abilityElement.className = 'ability-item';
+                abilityElement.innerHTML = `
+                    <div class="ability-header">
+                        <h3>${ability.name}</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="ability-content">
+                        <p>${ability.description}</p>
+                    </div>
+                `;
+                
+                const abilityHeader = abilityElement.querySelector('.ability-header');
+                const abilityContent = abilityElement.querySelector('.ability-content');
+                
+                abilityHeader.addEventListener('click', () => {
+                    abilityContent.classList.toggle('active');
+                    const icon = abilityHeader.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+                
+                abilitiesContainer.appendChild(abilityElement);
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Show spirit detail
+        function showSpiritDetail(spirit) {
+            showPage('spirit-detail');
+            
+            // Populate detail data
+            document.getElementById('detail-spirit-image').src = spirit.image;
+            document.getElementById('detail-spirit-name').textContent = spirit.name;
+            document.getElementById('detail-spirit-description').textContent = spirit.description;
+            document.getElementById('detail-spirit-type').textContent = spirit.type;
+            document.getElementById('detail-spirit-rank').textContent = spirit.rank;
+            document.getElementById('detail-spirit-owners').textContent = spirit.owners;
+            document.getElementById('detail-spirit-affinity').textContent = spirit.affinity;
+            
+            // Populate abilities
+            const abilitiesContainer = document.getElementById('detail-spirit-abilities');
+            abilitiesContainer.innerHTML = '';
+            
+            spirit.abilities.forEach(ability => {
+                const abilityElement = document.createElement('div');
+                abilityElement.className = 'ability-item';
+                abilityElement.innerHTML = `
+                    <div class="ability-header">
+                        <h3>${ability.name}</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="ability-content">
+                        <p>${ability.description}</p>
+                    </div>
+                `;
+                
+                const abilityHeader = abilityElement.querySelector('.ability-header');
+                const abilityContent = abilityElement.querySelector('.ability-content');
+                
+                abilityHeader.addEventListener('click', () => {
+                    abilityContent.classList.toggle('active');
+                    const icon = abilityHeader.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+                
+                abilitiesContainer.appendChild(abilityElement);
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Show beast detail
+        function showBeastDetail(beast) {
+            showPage('beast-detail');
+            
+            // Populate detail data
+            document.getElementById('detail-beast-image').src = beast.image;
+            document.getElementById('detail-beast-name').textContent = beast.name;
+            document.getElementById('detail-beast-description').textContent = beast.description;
+            document.getElementById('detail-beast-type').textContent = beast.type;
+            document.getElementById('detail-beast-rank').textContent = beast.rank;
+            document.getElementById('detail-beast-habitat').textContent = beast.habitat;
+            document.getElementById('detail-beast-features').textContent = beast.features;
+            
+            // Populate abilities
+            const abilitiesContainer = document.getElementById('detail-beast-abilities');
+            abilitiesContainer.innerHTML = '';
+            
+            beast.abilities.forEach(ability => {
+                const abilityElement = document.createElement('div');
+                abilityElement.className = 'ability-item';
+                abilityElement.innerHTML = `
+                    <div class="ability-header">
+                        <h3>${ability.name}</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="ability-content">
+                        <p>${ability.description}</p>
+                    </div>
+                `;
+                
+                const abilityHeader = abilityElement.querySelector('.ability-header');
+                const abilityContent = abilityElement.querySelector('.ability-content');
+                
+                abilityHeader.addEventListener('click', () => {
+                    abilityContent.classList.toggle('active');
+                    const icon = abilityHeader.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+                
+                abilitiesContainer.appendChild(abilityElement);
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Show clan detail
+        function showClanDetail(clan) {
+            showPage('clan-detail');
+            
+            // Populate detail data
+            document.getElementById('detail-clan-image').src = clan.image;
+            document.getElementById('detail-clan-name').textContent = clan.name;
+            document.getElementById('detail-clan-description').textContent = clan.description;
+            document.getElementById('detail-clan-founder').textContent = clan.founder;
+            document.getElementById('detail-clan-territory').textContent = clan.territory;
+            document.getElementById('detail-clan-status').textContent = clan.status;
+            document.getElementById('detail-clan-specialization').textContent = clan.specialization;
+            
+            // Populate members
+            const membersContainer = document.getElementById('detail-clan-members');
+            membersContainer.innerHTML = '';
+            
+            clan.members.forEach(member => {
+                const memberElement = document.createElement('div');
+                memberElement.className = 'member-item';
+                memberElement.innerHTML = `
+                    <div class="member-header">
+                        <h3>${member.name} - ${member.role}</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="member-content">
+                        <p>${member.description}</p>
+                    </div>
+                `;
+                
+                const memberHeader = memberElement.querySelector('.member-header');
+                const memberContent = memberElement.querySelector('.member-content');
+                
+                memberHeader.addEventListener('click', () => {
+                    memberContent.classList.toggle('active');
+                    const icon = memberHeader.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+                
+                membersContainer.appendChild(memberElement);
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Show specific page
+        function showPage(pageId) {
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close mobile menu if open
+            mobileMenuBtn.classList.remove('active');
+            mainNav.classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Initialize the page
+        function init() {
+            generateCharacterCards();
+            generateSpiritCards();
+            generateBeastCards();
+            generateClanCards();
+            
+            // Navigation event listeners
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = link.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Back button event listeners
+            document.getElementById('back-to-characters').addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('characters');
+            });
+            
+            document.getElementById('back-to-spirits').addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('spirits');
+            });
+            
+            document.getElementById('back-to-beasts').addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('beasts');
+            });
+            
+            document.getElementById('back-to-clans').addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('clans');
+            });
+            
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+        }
+
+        // Run initialization when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
